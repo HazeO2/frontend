@@ -1,40 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-gray-100">
 
-<div class="con1">
-    <div class="navbar">
-        <div class="logo">mybrand</div>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
+    <div class="w-full">
+        <!-- Navbar -->
+        <nav class="bg-gray-900 text-white px-8 py-4 flex justify-between items-center w-full">
+            <div class="text-2xl font-bold">mybrand</div>
+
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-orange-400">Home</a>
+                <a href="#" class="hover:text-orange-400">About Me</a>
+                <a href="#" class="hover:text-orange-400">Projects</a>
+                <a href="#" class="hover:text-orange-400">Contact</a>
+            </div>
+
+            <!-- Hamburger Menu -->
+            <div class="md:hidden flex flex-col space-y-1 cursor-pointer" onclick="toggleMenu()">
+                <div class="w-8 h-1 bg-white"></div>
+                <div class="w-8 h-1 bg-white"></div>
+                <div class="w-8 h-1 bg-white"></div>
+            </div>
+        </nav>
+
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="hidden flex flex-col items-center bg-gray-900 text-white py-4 md:hidden">
+            <a href="#" class="py-2 hover:text-orange-400">Home</a>
+            <a href="#" class="py-2 hover:text-orange-400">About Me</a>
+            <a href="#" class="py-2 hover:text-orange-400">Projects</a>
+            <a href="#" class="py-2 hover:text-orange-400">Contact</a>
         </div>
-        <ul class="nav-links">
-            <li><a href="#">home</a></li>
-            <li><a href="#">about me</a></li>
-            <li><a href="#">projects</a></li>
-            <li><a href="#">contact</a></li>
-        </ul>
+
+        <!-- Profile Section -->
+<section class="flex justify-center items-center">
+
+        <div class="w-full flex justify-evenly items-center bg-white shadow-lg rounded-lg text-center p-8 mt-10">
+
+            <div class="flex flex-wrap justify-center items-center gap-8">
+                <img src="Images/profile_picture.jpg" alt="Angelo Justin Feliciano Payad"
+                    class="w-40 h-40 rounded-full mx-auto mb-4 cursor-pointer">
+
+            <div class="flex flex-col justify-center items-center">
+
+                <h1 class="text-2xl font-bold text-gray-900">Angelo Justin Feliciano Payad</h1>
+                <p class="text-gray-600 text-lg mb-4">FRONT-END WEBSITE DEVELOPER</p>
+                <a href="https://github.com/HazeO2" target="_blank">  
+
+                <div class="flex gap-5">
+                    <img src="Images/github-mark.png" alt="Github" class="bg-white h-16 text-white px-6 py-2 rounded-lg hover:bg-gray-400 transition"></a>
+                    <a href="https://www.facebook.com/justinpayadd/" target="_blank">
+                        <img src="Images/facebook.png" alt="Facebook" class="bg-white h-16 text-white px-6 py-2 rounded-lg hover:bg-gray-400 transition"></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div>
+
     </div>
 
-    <div class="con3">
-        <!-- Content here -->
-    </div>
+
+
+</section>
+
 </div>
 
-<script>
-    function toggleMenu() {
-        const nav = document.querySelector('.nav-links');
-        nav.classList.toggle('show');
-    }
-</script>
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+    </script>
 
 </body>
 </html>
