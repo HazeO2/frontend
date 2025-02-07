@@ -3,12 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Lol</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Navbar</title>
 </head>
 <body>
-    <h1>Payad</h1>
-    <h2>HARVEY</h2>
 
+<div class="con1">
+    <div class="navbar">
+        <div class="logo">mybrand</div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">home</a></li>
+            <li><a href="#">about me</a></li>
+            <li><a href="#">projects</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </div>
+
+    <div class="con3">
+        <!-- Content here -->
+    </div>
+</div>
+
+<script>
+    function toggleMenu() {
+        const nav = document.querySelector('.nav-links');
+        nav.classList.toggle('show');
+    }
+</script>
 
 </body>
 </html>
